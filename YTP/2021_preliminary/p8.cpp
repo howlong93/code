@@ -52,6 +52,10 @@ int main() {
 		int a_size = table[a].size(), b_size = table[b].size();
 		int l = 0, r = min(a_size, b_size);
 
+		if (table[a][r-1] == table[b][r-1]) {
+			cout << r << '\n';
+			continue;
+		}
 		while (l < r) {
 			int mid = (l+r)/2;
 			if (table[a][mid] == table[b][mid] && table[a][mid+1] != table[b][mid+1]) {
