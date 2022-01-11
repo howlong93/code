@@ -34,7 +34,7 @@ int main() {
 	Linked_List *on_shelf = new Linked_List();
 	Linked_List *borrowed = new Linked_List();
 
-	cerr << "oiginal book amount: ";
+	cerr << "original book amount: ";
 	cin >> n;
 	cin.ignore();
 
