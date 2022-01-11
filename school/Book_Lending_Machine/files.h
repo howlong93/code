@@ -1,11 +1,8 @@
-#include <iostream>
-
 using namespace std;
 
 struct Node {
 	string book_id;
 	string book_name;
-//	string time;
 
 	Node *next;
 	Node *prev;
@@ -40,7 +37,6 @@ struct Linked_List {
 		aba = 1;
 	}
 
-	//TODO
 	void Print_List() {
 		Node *cur = root;
 	    while (cur != nullptr) {
