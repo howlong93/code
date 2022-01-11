@@ -61,7 +61,7 @@ int main() {
 
 		cerr << string(75, '~') << "\n\n";
 
-		if (ch == 1) { //add new book to shelf
+		if (ch == 1) { //insert new book to shelf
 			on_shelf -> Print_List();
 			cerr << "\n" << string(75, '~') << '\n';
 
@@ -72,7 +72,7 @@ int main() {
 
 			on_shelf -> insert (x, borrowed);
 		}
-		else if (ch == 2) { //lend out
+		else if (ch == 2) { //borrow book
 			on_shelf -> Print_List();
 			cerr << string(75, '~') << '\n';
 			cerr << "which book do you want to borrow?\n>> book name: ";
@@ -111,7 +111,7 @@ int main() {
 				cout << "Not a lent out book: " << x << '\n';
 			}
 		}
-		else if (ch == 4) {
+		else if (ch == 4) {  //find book by name
 			cerr << "which book do you want to find?\n>> book name: ";
 			getline (cin, x);
 
@@ -119,7 +119,7 @@ int main() {
 			cerr << '\n';
 			borrowed -> query_book_name (x, 0);
 		}
-		else if (ch == 5) {
+		else if (ch == 5) {  //print list
 			on_shelf -> Print_List();
 			cerr << string (75, '~') << '\n';
 		}
