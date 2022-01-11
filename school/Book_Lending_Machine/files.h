@@ -178,7 +178,7 @@ struct Linked_List {
 		if (method) { // borrow book (find by name)
 			pos = name_fnd_pos (tar);
 		}
-		else {   // return book (find by id)
+		else {    // return book (find by id)
 			pos = id_fnd_pos (tar);
 		}
 
