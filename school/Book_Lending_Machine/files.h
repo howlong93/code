@@ -6,7 +6,7 @@ struct Node {
 
 	Node *next;
 	Node *prev;
-
+ 
 	Node() {
 		next = prev = nullptr;
 		book_name = "";
