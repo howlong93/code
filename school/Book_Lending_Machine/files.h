@@ -205,6 +205,6 @@ struct Linked_List {
 			pos -> next -> prev = pos -> prev;
 			delete pos;
 		}
-		aba--;
+		aba--; 
 	}
 };
