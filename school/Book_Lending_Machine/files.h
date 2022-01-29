@@ -1,15 +1,12 @@
-#include <iostream>
-
 using namespace std;
 
 struct Node {
 	string book_id;
 	string book_name;
-//	string time;
 
 	Node *next;
 	Node *prev;
-
+ 
 	Node() {
 		next = prev = nullptr;
 		book_name = "";
@@ -40,7 +37,6 @@ struct Linked_List {
 		aba = 1;
 	}
 
-	//TODO
 	void Print_List() {
 		Node *cur = root;
 	    while (cur != nullptr) {
@@ -182,7 +178,7 @@ struct Linked_List {
 		if (method) { // borrow book (find by name)
 			pos = name_fnd_pos (tar);
 		}
-		else { // return book (find by id)
+		else {   // return book (find by id)
 			pos = id_fnd_pos (tar);
 		}
 
@@ -209,6 +205,6 @@ struct Linked_List {
 			pos -> next -> prev = pos -> prev;
 			delete pos;
 		}
-		aba--;
+		aba--; 
 	}
 };
