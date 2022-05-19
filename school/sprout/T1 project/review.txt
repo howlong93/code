@@ -1,0 +1,216 @@
+13
+
+0
+image book_image.txt
+text-begin
+Hello!!
+It's time to review the things we learned
+Let's get started!!
+text-end
+
+end
+
+
+1
+image computer.txt
+text-begin
+Kiki wants to learn C++
+because he will get a new computer if he finish the courses.
+We've learned to declare variables and some basic calculation
+ready for a short quiz??
+text-end
+
+test
+img
+page_1_question.txt
+What will the output be??
+end-question
+
+0 2
+
+end
+
+
+2
+image sad_face.txt
+text-begin
+The teacher is asking questions about the if-else statements.
+Kiki has difficulty understanding it.
+Could you help him solve the problem??
+text-end
+
+test
+img
+page_2_question.txt
+What will be shown when we run the code??
+end-question
+
+@x@
+end
+
+3
+image for_loop_image.txt
+text-begin
+Kiki want to do a same action several times to solve the problems on Sprout OJ
+He searched for the while-loop online.
+
+Do you know how to use it??
+text-end
+
+test
+img
+page_3_question.txt
+What will the output be??
+end-question
+
+128
+end
+
+4
+image dice.txt
+text-begin
+Kiki is building a code to get a random number.
+He found out that without the srand() function,
+he will get the same number everytime.
+text-end
+
+test
+img
+page_4_question.txt
+If the first time Kiki executed the code, the output was 3.
+Then what will the output be when we execute it the second time??
+end-question
+3
+
+end
+
+
+5
+image list.txt
+text-begin
+Kiki is saving a list of datas related to each other.
+He needs to declare a one-dimension-array.
+Do you remember the rules??
+text-end
+
+test
+img
+page_5_question.txt
+What will the output be??
+end-question
+Wood
+
+end
+
+
+6
+image string_function.txt
+text-begin
+Kiki is learning the string functions:
+strcat, strncat, strcpy, strncpy, strcmp
+He is very confused with these functions.
+text-end
+
+test
+img
+page_6_question.txt
+What will the output be?
+end-question
+success
+
+end
+
+
+7
+image 
+text-begin
+Kiki wants to write his own function,
+but he always get CE!!
+the deadline is around the corner,
+help him with his work.
+text-end
+
+test
+img
+page_7_question.txt
+What will the return value be when we run the function the second time??
+end-question
+
+24
+end
+
+8
+image computer_struct.txt
+text-begin
+Kiki declared his own struct type called new_computer
+he uses it to save the details about the computers he has searched for
+and he may read these informations running his project.
+text-end
+
+test
+img
+page_8_question.txt
+what will the output be??
+end-question
+
+20
+end
+
+9
+image recursion_times.txt
+text-begin
+Kiki uses a recursive function to calculate the fabonacci numbers
+but it uses lots of memory and quite slow,
+do you know how recursions run??
+text-end
+
+test
+img
+page_9_question.txt
+How many times will the function be executed if we have "fabo(5);" in main function??
+end-question
+
+15
+end
+
+
+
+10
+image choosing_computer.txt
+text-begin
+Kiki finally finished all the classes and passed the Sprout's first-stage test
+His father took him to the shop to purchase a new computer, there are two choices
+However, one of the computer has been hacked.
+The safe one is on his??
+[d] right
+[a] left
+text-end
+
+goto d 11
+goto a 12
+
+end
+
+11
+image skull.txt
+text-begin
+NNNNNooooooo!!
+You chose the wrong one, he's computer can't work!!!
+choose again??
+
+[e] close book and exit
+[b] choose again
+text-end
+
+end
+
+12
+image final.txt
+text-begin
+Hurray!!
+Kiki finally got his new computer
+Thanks for helping him with all the work!!
+                                        === The End ===
+text-end
+
+end
