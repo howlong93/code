@@ -40,7 +40,7 @@ else:
 trans3 = input()
 blocknum = 3
 save_hash = input()
-te23fbbbb736a329b6064146b9eb5fe8c584e61116471138dbfb6hird_nonce = 0
+third_nonce = 0
 sv_money = re.findall(r"\d+", trans3)
 third_nonce = 0
 hash_string = "uuuu"
