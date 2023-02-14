@@ -63,12 +63,12 @@ void output (int graph[SIZE][SIZE], int vis[SIZE][SIZE], int mined_cnt, int flag
 
 		for (int j = 0; j < SIZE; j++) {
 			if (i == cursor_row && j == cursor_col)	//判斷是否為游標所在地塊
-				cout << "\033[5;44m";				//文字閃爍
+				cout << "\033[5;44m";	//文字閃爍
 
-			if (vis[i][j] == 0) cout << "-" << "\033[0m ";	//未知地塊
-			else if (vis[i][j] == 1) {						//已點開的地塊(可顯示實際值)
+			if (vis[i][j] == 0) cout << "-" << "\033[0m ";  //未知地塊
+			else if (vis[i][j] == 1) {                      //已點開的地塊(可顯示實際值)
 				if (graph[i][j] == -1) cout << "\033[1;31m" << "*" << "\033[0m "; //炸彈
-				else cout << graph[i][j] << "\033[0m ";							  //非炸彈（數字代表周遭九宮格內炸彈數
+				else cout << graph[i][j] << "\033[0m ";     //非炸彈（數字代表周遭九宮格內炸彈數
 			}
 			else if (vis[i][j] == 2) cout << "\033[1;36m" << "$" << "\033[0m ";   //旗標標示
 
@@ -108,7 +108,7 @@ int bomb_around (int graph[SIZE][SIZE], int row, int col) {
 	}
 	return bomb_num;
 }
-
+   
 int main() {
 
 	/*
@@ -165,14 +165,14 @@ int main() {
 		else if (ch == '0') { //點開地塊
 			if (vis[cursor_row][cursor_col] == 1) continue; //已點開之地塊
 			else if (graph[cursor_row][cursor_col] == -1) { //踩到炸彈
-				for (int t = 0; t < SIZE*SIZE; t++) vis[t/SIZE][t%SIZE] = 1; //顯示整張圖
+				for (int t = 0; t < SIZE*SIZE; t++) vis[t/SIZE][t%SIZE] = 1; //標記整張圖都被點開
 				fail = true;  //標記已失敗
 			}
 			else if (graph[cursor_row][cursor_col] > 0) {  //周圍九宮格內有炸彈
 				vis[cursor_row][cursor_col] = 1;
 				mined_cnt++;
 			}
-			else {	    //點開之地塊周遭九宮格沒有炸彈
+			else {	    //點開地塊周圍九宮格沒有炸彈
 				//BFS
 				queue<int> save;
 				save.push (cursor_row*SIZE + cursor_col);
@@ -213,12 +213,12 @@ int main() {
 
 		//lose
 		if (fail) {
-			cout << "\033[1;5;31mStepped on bomb!!\033[0m\n";
+			cout << "\033[1;5;31m" << "Stepped on bomb!!" << "\033[0m\n";
 			break;
 		}
 	}
 
-	if (!fail) cout << "\033[1;5;32mYou win!!!\033[0m\n";
+	if (!fail) cout << "\033[1;5;32m" << "You win!!!" << "\033[0m\n";
 
 	return 0;
 }
