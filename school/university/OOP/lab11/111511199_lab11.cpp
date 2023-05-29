@@ -14,7 +14,6 @@ class Product {
 
     Product() {
         quantity = 0;
-        type = name = "";
     }
     Product (string _t, string _n, int _q) {
         type = _t;
@@ -28,18 +27,22 @@ int main(int argc, char *argv[]) {
     input.open (argv[1]);
 
     map<string, map<string, int>> data;
+    vector<Product> vec;
     
     string pc_type, pc_nm;
+    int i = 0;
     int quantity;
     while (input >> pc_type >> pc_nm >> quantity) {
-        data[pc_type][pc_nm] += quantity;
+        data[pc_type][pc_nm] = quantity;
+        Product temp (pc_type, pc_nm, quantity);
     }
 
     string ch;
     while (cin >> ch) {
-        if (ch == "-l") {
+        if (ch == "-i") {
             cin >> pc_type >> pc_nm >> quantity;
             data[pc_type][pc_nm] += quantity;
+            bool flag = false;
         }
         else if (ch == "-s") {
             cin >> pc_type >> pc_nm >> quantity;
@@ -50,22 +53,19 @@ int main(int argc, char *argv[]) {
             cout << pc_type << ' ' << pc_nm << ' ' << data[pc_type][pc_nm] << '\n';
         }
         else if (ch == "-all") {
-            vector<Product> product;
             for (auto k: data) {
-                for (auto s : k.second) {
-                    Product temp (k.first, s.first, s.second);
-                    product.push_back (temp);
-                }
-            }
-            
-            sort (product.begin(), product.end(), [] (Product &a, Product &b) {
-                    if (a.type != b.type) return a.type < b.type;
-                    else if (a.quantity < b.quantity) return a.quantity < b.quantity;
-                    else return a.name < b.name;
-                });
+                map<int, vector<string>> output;
 
-            for (auto k: product) {
-                cout << k.type << ' ' << k.name << ' ' << k.quantity << '\n';
+                for (auto l: k.second) {
+                    output[l.second].push_back (l.first);
+                }
+        
+                for (auto x: output) {
+                    sort (x.second.begin(), x.second.end());
+                    for (auto m: x.second) {
+                        cout << k.first << ' ' << m << ' ' << x.first << '\n';
+                    }
+                }
             }
         }
     }
